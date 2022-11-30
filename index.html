@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+    <head>
+        <title>Ser além</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        
+        
+    </head>
+    <body>
+        <!--Topo da página-->
+        <header>
+            <div class="p-5 bg-primary text-white text-center">
+                <h1>Ser Além</h1>
+                <p>O modo mais rápido de aprimorar ainda mais o conhecimento dos seus alunos!</p> 
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <div class="row mt-3 mx-2">
+            
+                    <div class="col-sm-12 border border-2">
+                        
+                        <!--Topo da sessão escola-->
+                        <div class="d-flex align-items-center justify-content-between mt-3 mb-3">
+                            
+                            <h3 class="mt-2">Suas Escolas</h3>
+                            
+                            <!--Adicionar Escola-->
+                            <div>
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalCriarEscola">
+                                  +
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!--Caixa da sessão Escola-->
+                        <div class="campoDasEscolas border border-1">
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Modal - Criar escola -->
+        <div class="modal" id="modalCriarEscola">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+        
+                    
+                    <div class="modal-header">
+                    <h4 class="modal-title">Crie uma nova escola</h4>
+                    </div>
+        
+                    
+                    <div class="modal-body">
+                        <form id="formCriarEscola" name="formCriarEscola" >
+                                <div class="mb-3 mt-2">
+                                    <label for="nomeEscola" class="form-label">Nome da escola:</label>
+                                    <input type="text" class="form-control" id="nomeEscola" name="nomeEscola" placeholder="Digite o nome da escola">
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="submit" id="btnCriaEscl" name="btnCriaEscl" class="btn btn-success" >Criar</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                </div>
+                        </form>
+                    </div>
+                    
+        
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal - Editar Escola -->
+        <div class="modal" id="modalEditScol">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+        
+                    
+                    <div class="modal-header">
+                    <h4 class="modal-title">Edite sua escola</h4>
+                    </div>
+        
+                    
+                    <div class="modal-body">
+                        <form id="formEditScol" name="formEditScol" >
+                                <div class="mb-3 mt-2">
+                                    <label for="nomeEditEscola" class="form-label">Editar nome da escola:</label>
+                                    <input type="text" class="form-control" id="nomeEditEscola" name="nomeEditEscola" placeholder="Digite o novo nome da escola">
+                                </div>
+
+                                <div class="modal-footer">
+                                    <a href="./escola.html" type="submit" id="btnEditEscl" name="btnEditEscl" class="btn btn-success" >Salvar</a>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                </div>
+                        </form>
+                    </div>     
+                </div>
+            </div>
+        </div>
+   
+        <!-- Modal - Criar Turma -->
+        <div class="modal" id="modalCriarTurma">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+        
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Crie uma nova turma</h4>
+                    </div>
+        
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form id="formCriarTurm" name="formCriaTurm">
+                                <div class="mb-3 mt-2">
+                                    <label for="nomeDaTurma" class="form-label">Nome da turma:</label>
+                                    <input type="text" class="form-control mb-2" id="nomeDaTurma" name="nomeDaTurma" placeholder="Digite o nome da escola"  required>
+                                </div>
+
+                                <div class="mb-3 mt-2">
+                                    <label for="discpDaTurma" class="form-label">Disciplina:</label>
+                                    <input type="text" class="form-control" id="discpDaTurma" name="discpDaTurma" placeholder="Digite qual a disciplina" required>
+                                </div>
+
+                                
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-success" id="btnCriarTurm" name="btnCriarTurm">Criar</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                </div>
+                        </form>
+                    </div>
+                    
+        
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal - Editar Turma -->
+        <div class="modal" id="modalEditTurma">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+        
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Edite sua turma</h4>
+                    </div>
+        
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form id="formEditTurm" name="formEditTurm">
+                                <div class="mb-3 mt-2">
+                                    <label for="nomeEditTurma" class="form-label">Novo nome da turma:</label>
+                                    <input type="text" class="form-control mb-2" id="nomeEditTurma" name="nomeEditTurma" placeholder="Digite o novo nome da Turma"  required>
+                                </div>
+
+                                <div class="mb-3 mt-2">
+                                    <label for="discpDaTurma" class="form-label">Disciplina:</label>
+                                    <input type="text" class="form-control" id="discpDaTurma" name="discpDaTurma" placeholder="Digite qual a disciplina" required>
+                                </div>
+
+                                
+                                <div class="modal-footer">
+                                    <a href="./escola01.html" class="btn btn-success" id="btnEditTurm" name="btnEditTurm" onclick="">Salvar</a>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                </div>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <script src="./script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    
+</html>
