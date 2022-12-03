@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos Java Script</title>
+</head>
+<body>
+    <form action="">
+        <div class="mb-3 mt-3">
+          <label for="nome">Email:</label>
+          <input type="text" class="form-control" id="nome" placeholder="Informe o nome" name="nome" value="TE Amo Melo">
+        </div>
+        <div class="mb-3">
+          <label for="cpf">CPF:</label>
+          <input type="text" class="form-control" id="cpf" placeholder="Informe o CPF" name="cpf">
+        </div>
+        <button type="button" class="btn btn-primary" onclick="teste();">Cadastrar</button>
+      </form>
+      <script>
+          function teste(){
+                var nome = document.getElementById('nome').value;
+                var cpf = document.getElementById('cpf').value;
+                alert(nome);
+          }
+      </script>
+</body>
+</html>
