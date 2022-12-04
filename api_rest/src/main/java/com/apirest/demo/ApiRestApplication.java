@@ -13,10 +13,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableSwagger2
-public class ApiRestExemploApplication {
+public class ApiRestApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ApiRestExemploApplication.class, args);
+		SpringApplication.run(ApiRestApplication.class, args);
 	}
 	
 	
