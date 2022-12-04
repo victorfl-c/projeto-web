@@ -20,19 +20,19 @@ public class ControllerTurma {
 	}
 
 	@CrossOrigin(origins = "*")
-	@GetMapping("/listarturma")
+	@GetMapping("/listarTurma")
 	List<Turma> listar() {
 		return repository.findAll();
 	}
 
 	@CrossOrigin(origins = "*")
-	@PostMapping("/cadastrarturma")
+	@PostMapping("/cadastrarTurma")
 	Turma cadastrar(@RequestBody Turma turma) {
 		return repository.save(turma);
 	}
 
 	@CrossOrigin(origins = "*")
-	@GetMapping("/getturma/{id}")
+	@GetMapping("/getTurma/{id}")
 	Turma get(@PathVariable Long id) {
 		return repository.findById(id).orElseThrow(() -> new TurmaNotFoundException(id));
 	}
@@ -49,10 +49,11 @@ public class ControllerTurma {
     */
 
 	@CrossOrigin(origins = "*")
-	@PutMapping("/atualizarturma/{id}")
+	@PutMapping("/atualizaTurma/{id}")
 	Turma atualizar(@RequestBody Turma turmaNovo, @PathVariable Long id) {
 		return repository.findById(id).map(turma -> {
 			turma.setNome(turmaNovo.getNome());
+			turma.setDisciplina(turmaNovo.getDisciplina());
 			return repository.save(turma);
 		}).orElseGet(() -> {
 			turmaNovo.setId(id);
@@ -61,7 +62,7 @@ public class ControllerTurma {
 	}
 
 	@CrossOrigin(origins = "*")
-	@DeleteMapping("/removerturma/{id}")
+	@DeleteMapping("/removerTurma/{id}")
 	void remover(@PathVariable Long id) {
 		repository.deleteById(id);
 	}

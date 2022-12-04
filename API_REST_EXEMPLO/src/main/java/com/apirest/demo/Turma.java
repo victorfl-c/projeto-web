@@ -23,4 +23,7 @@ public class Turma {
 	@Column(name = "NOME", length = 50, nullable = false)
 	private String nome;
 
+	@Column(name = "DISCIPLINA", length = 50, nullable = false)
+	private String disciplina;
+
 }

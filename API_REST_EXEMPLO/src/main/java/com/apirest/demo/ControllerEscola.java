@@ -20,19 +20,19 @@ public class ControllerEscola {
 	}
 
 	@CrossOrigin(origins = "*")
-	@GetMapping("/listarescola")
+	@GetMapping("/listarEscola")
 	List<Escola> listar() {
 		return repository.findAll();
 	}
 
 	@CrossOrigin(origins = "*")
-	@PostMapping("/cadastrarescola")
+	@PostMapping("/cadastrarEscola")
 	Escola cadastrar(@RequestBody Escola escola) {
 		return repository.save(escola);
 	}
 
 	@CrossOrigin(origins = "*")
-	@GetMapping("/getescola/{id}")
+	@GetMapping("/getEscola/{id}")
 	Escola get(@PathVariable Long id) {
 		return repository.findById(id).orElseThrow(() -> new EscolaNotFoundException(id));
 	}
@@ -49,7 +49,7 @@ public class ControllerEscola {
     */
 
 	@CrossOrigin(origins = "*")
-	@PutMapping("/atualizarescola/{id}")
+	@PutMapping("/atualizarEscola/{id}")
 	Escola atualizar(@RequestBody Escola escolaNovo, @PathVariable Long id) {
 		return repository.findById(id).map(escola -> {
 			escola.setNome(escolaNovo.getNome());
@@ -61,7 +61,7 @@ public class ControllerEscola {
 	}
 
 	@CrossOrigin(origins = "*")
-	@DeleteMapping("/removerescola/{id}")
+	@DeleteMapping("/removerEscola/{id}")
 	void remover(@PathVariable Long id) {
 		repository.deleteById(id);
 	}
